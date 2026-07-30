@@ -174,5 +174,8 @@
     "call": "Call",
     "zalo": "Zalo",
     "kakao": "Kakao"
+  },
+  "a11y": {
+    "back_to_top": "Back to top"
   }
 }

@@ -174,5 +174,8 @@
     "call": "전화",
     "zalo": "Zalo",
     "kakao": "카카오"
+  },
+  "a11y": {
+    "back_to_top": "맨 위로 이동"
   }
 }

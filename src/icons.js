@@ -21,6 +21,7 @@ export const icons = {
   award: wrap('<circle cx="12" cy="8" r="6"/><path d="M15.5 13.5L17 22l-5-3-5 3 1.5-8.5"/>'),
   globe: wrap('<circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>'),
   handshake: wrap('<path d="M8.5 14.5L4 10l4-4 3.5 3.5"/><path d="M15.5 14.5L20 10l-4-4-3.5 3.5"/><path d="M8.5 14.5L11 17l1-1 1 1 2.5-2.5"/>'),
+  arrowUp: wrap('<line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/>'),
 };
 
 export function icon(name, extraClass = '') {
