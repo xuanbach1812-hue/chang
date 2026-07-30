@@ -1,0 +1,178 @@
+{
+  "meta": {
+    "title": "Đinh Thị Thu Chang | Visa Việt–Hàn • Nhập khẩu Hàn Quốc • Đào tạo nghề",
+    "description": "Đinh Thị Thu Chang – Founder & CEO DOC Korea Việt Nam. Tư vấn visa, giấy phép lao động, thẻ tạm trú; nhập khẩu phân phối Hồng Sâm – Mỹ phẩm – Thực phẩm Hàn Quốc; đào tạo phát triển nghề cho người trẻ."
+  },
+  "nav": {
+    "home": "Trang chủ",
+    "services": "Dịch vụ",
+    "about": "Về Chang",
+    "gallery": "Hoạt động",
+    "process": "Quy trình",
+    "faq": "Hỏi đáp",
+    "contact": "Liên hệ",
+    "cta": "Liên hệ ngay"
+  },
+  "brand": {
+    "name": "Đinh Thị Thu Chang",
+    "tagline": "Cầu nối tin cậy Việt – Hàn"
+  },
+  "hero": {
+    "eyebrow": "Visa • Nhập khẩu Hàn Quốc • Đào tạo nghề",
+    "title_pre": "Đồng hành cùng bạn trên hành trình",
+    "title_accent": "Việt – Hàn",
+    "sub": "Hỗ trợ visa & giấy tờ pháp lý, phân phối sản phẩm Hàn Quốc chính hãng và phát triển đào tạo nghề — với sự tận tâm và uy tín được xây dựng qua từng khách hàng.",
+    "badge1": "Founder & CEO DOC Korea Việt Nam",
+    "badge2": "Đối tác chính thức Hwang Pung Jung — Since 1908",
+    "badge3": "Đã ký kết hợp tác tại Hàn Quốc",
+    "cta_primary": "Gọi ngay 0988 818 936",
+    "cta_secondary": "Chat Zalo",
+    "card_title": "Đồng hành cùng",
+    "card_sub": "hàng trăm khách hàng & đối tác Việt – Hàn"
+  },
+  "trust": {
+    "items": [
+      { "value": "3", "label": "Mảng dịch vụ chuyên sâu" },
+      { "value": "Since 1908", "label": "Đối tác Hwang Pung Jung" },
+      { "value": "VN ⇄ KR", "label": "Kết nối hai chiều" },
+      { "value": "Tận tâm", "label": "Đồng hành trọn hành trình" }
+    ]
+  },
+  "services": {
+    "eyebrow": "Dịch vụ",
+    "title": "3 mảng hoạt động cốt lõi",
+    "sub": "Mỗi dịch vụ đều được Chang trực tiếp theo sát, đảm bảo minh bạch và đúng cam kết.",
+    "items": [
+      {
+        "title": "Visa • Giấy phép lao động • Thẻ tạm trú",
+        "desc": "Hỗ trợ trọn gói thủ tục visa cho người Việt sang Hàn Quốc, cùng giấy phép lao động và thẻ tạm trú cho người nước ngoài tại Việt Nam.",
+        "list": [
+          "Tư vấn loại visa phù hợp mục đích của bạn",
+          "Chuẩn bị & rà soát hồ sơ đầy đủ, chính xác",
+          "Theo dõi tiến độ, cập nhật liên tục, rõ ràng",
+          "Hỗ trợ gia hạn, chuyển đổi diện cư trú"
+        ],
+        "cta": "Tư vấn Visa ngay"
+      },
+      {
+        "title": "Nhập khẩu & Phân phối sản phẩm Hàn Quốc",
+        "desc": "Phân phối chính hãng Hồng Sâm, Mỹ phẩm và Thực phẩm Hàn Quốc — kết nối trực tiếp từ thương hiệu và hợp tác xã uy tín tại Hàn Quốc.",
+        "list": [
+          "Hồng sâm cao cấp — đối tác Hwang Pung Jung Since 1908",
+          "Mỹ phẩm chính hãng, đầy đủ chứng từ nhập khẩu",
+          "Thực phẩm Hàn Quốc đa dạng, nguồn gốc rõ ràng",
+          "Cung cấp sỉ & lẻ, giao hàng toàn quốc"
+        ],
+        "cta": "Tìm hiểu sản phẩm"
+      },
+      {
+        "title": "Phát triển & Đào tạo nghề",
+        "desc": "Xây dựng chương trình đào tạo nghề thực tiễn, mở ra cơ hội việc làm và định hướng phát triển cho các bạn trẻ.",
+        "list": [
+          "Đào tạo kỹ năng nghề theo nhu cầu thị trường",
+          "Kết nối cơ hội việc làm trong & ngoài nước",
+          "Hợp tác cùng trường nghề, doanh nghiệp đối tác",
+          "Đồng hành từ đào tạo đến việc làm thực tế"
+        ],
+        "cta": "Tìm hiểu chương trình"
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "Người sáng lập",
+    "title": "Đinh Thị Thu Chang",
+    "role": "Founder & CEO — DOC Korea Việt Nam",
+    "p1": "Với hành trình gắn bó cùng các đối tác Hàn Quốc — từ lễ khai trương thương hiệu, ký kết hợp tác phân phối, đến các chuyến làm việc trực tiếp tại Hàn Quốc — Chang xây dựng uy tín bằng sự đồng hành thực chất trong từng dự án.",
+    "p2": "Không chỉ dừng ở một lĩnh vực, Chang mong muốn trở thành cầu nối toàn diện: từ thủ tục pháp lý giúp người Việt an tâm ra nước ngoài và người nước ngoài an tâm ở lại Việt Nam, đến sản phẩm Hàn Quốc chính hãng và cơ hội nghề nghiệp cho thế hệ trẻ.",
+    "sig_role": "Founder & CEO, DOC Korea Việt Nam"
+  },
+  "gallery": {
+    "eyebrow": "Hoạt động thực tế",
+    "title": "Dấu ấn trên hành trình Việt – Hàn",
+    "sub": "Một vài khoảnh khắc từ các lễ ký kết, khai trương và chuyến làm việc tại Hàn Quốc.",
+    "captions": [
+      "Lễ khai trương Hwang Pung Jung",
+      "Ký kết hợp tác phân phối tại Hàn Quốc",
+      "Đoàn đại lý DOC Korea Việt Nam",
+      "Lễ ra mắt chi nhánh Nghệ An",
+      "Tham quan vùng nguyên liệu nhân sâm",
+      "Bảo tàng Nhân sâm Punggi, Hàn Quốc"
+    ]
+  },
+  "process": {
+    "eyebrow": "Quy trình",
+    "title": "Làm việc cùng Chang đơn giản như thế nào",
+    "steps": [
+      { "title": "Liên hệ & trao đổi", "desc": "Gọi điện, nhắn Zalo hoặc Kakao để chia sẻ nhu cầu của bạn." },
+      { "title": "Tư vấn giải pháp", "desc": "Chang đánh giá tình huống, đề xuất phương án phù hợp nhất." },
+      { "title": "Triển khai thực hiện", "desc": "Chuẩn bị hồ sơ / đơn hàng, theo dõi tiến độ minh bạch." },
+      { "title": "Đồng hành lâu dài", "desc": "Hỗ trợ sau khi hoàn tất, sẵn sàng cho những nhu cầu tiếp theo." }
+    ]
+  },
+  "quote": {
+    "text": "Uy tín không phải điều nói ra, mà là điều được chứng minh qua từng hồ sơ, từng chuyến hàng, từng học viên trưởng thành.",
+    "by": "Đinh Thị Thu Chang — Founder & CEO"
+  },
+  "contact": {
+    "eyebrow": "Liên hệ",
+    "title": "Sẵn sàng hỗ trợ bạn ngay hôm nay",
+    "sub": "Chọn kênh liên hệ thuận tiện nhất — Chang phản hồi nhanh chóng.",
+    "phone_label": "Điện thoại / Zalo",
+    "phone_sub": "Gọi trực tiếp hoặc nhắn Zalo",
+    "kakao_label": "KakaoTalk",
+    "kakao_sub": "Tìm ID hoặc quét mã QR bên dưới",
+    "kakao_id": "Changkum",
+    "kakao_note": "Ảnh QR minh hoạ — quét trong ứng dụng KakaoTalk hoặc tìm ID phía trên.",
+    "copy": "Sao chép",
+    "copied": "Đã sao chép!",
+    "hours_label": "Thời gian phản hồi",
+    "hours_value": "8:00 – 21:00 hằng ngày, kể cả cuối tuần",
+    "form_note": "Ưu tiên liên hệ trực tiếp qua điện thoại, Zalo hoặc KakaoTalk để được phản hồi nhanh nhất."
+  },
+  "faq": {
+    "eyebrow": "Hỏi đáp",
+    "title": "Câu hỏi thường gặp",
+    "items": [
+      {
+        "q": "Chang có hỗ trợ toàn bộ quy trình visa hay chỉ tư vấn?",
+        "a": "Chang hỗ trợ trọn gói: tư vấn loại visa phù hợp, chuẩn bị hồ sơ, theo dõi tiến độ và cập nhật liên tục cho đến khi hoàn tất."
+      },
+      {
+        "q": "Sản phẩm Hàn Quốc phân phối có nguồn gốc rõ ràng không?",
+        "a": "Có. Các sản phẩm hồng sâm, mỹ phẩm, thực phẩm đều được nhập khẩu chính hãng, có đối tác và chứng từ rõ ràng — trong đó có Hwang Pung Jung Since 1908."
+      },
+      {
+        "q": "Chương trình đào tạo nghề dành cho đối tượng nào?",
+        "a": "Dành cho các bạn trẻ mong muốn phát triển kỹ năng nghề thực tiễn và kết nối cơ hội việc làm trong nước hoặc quốc tế."
+      },
+      {
+        "q": "Tôi nên liên hệ qua kênh nào để được phản hồi nhanh nhất?",
+        "a": "Gọi trực tiếp hoặc nhắn Zalo theo số 0988 818 936 là nhanh nhất. Bạn cũng có thể liên hệ qua KakaoTalk với ID Changkum."
+      }
+    ]
+  },
+  "final_cta": {
+    "title": "Hãy để Chang đồng hành cùng bạn",
+    "sub": "Dù là thủ tục visa, sản phẩm Hàn Quốc chính hãng hay cơ hội đào tạo nghề — liên hệ ngay để được tư vấn tận tâm.",
+    "primary": "Gọi ngay 0988 818 936",
+    "secondary": "Chat Zalo"
+  },
+  "footer": {
+    "desc": "Cầu nối tin cậy giữa Việt Nam và Hàn Quốc — visa & giấy tờ pháp lý, sản phẩm Hàn Quốc chính hãng, đào tạo phát triển nghề.",
+    "col_services": "Dịch vụ",
+    "col_company": "Thông tin",
+    "col_contact": "Liên hệ",
+    "link_visa": "Visa & Giấy phép lao động",
+    "link_import": "Nhập khẩu Hàn Quốc",
+    "link_training": "Đào tạo nghề",
+    "link_about": "Về Chang",
+    "link_gallery": "Hoạt động",
+    "link_faq": "Hỏi đáp",
+    "rights": "© 2026 Đinh Thị Thu Chang. Mọi quyền được bảo lưu."
+  },
+  "mobile_bar": {
+    "call": "Gọi ngay",
+    "zalo": "Zalo",
+    "kakao": "Kakao"
+  }
+}

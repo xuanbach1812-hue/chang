@@ -1,0 +1,178 @@
+{
+  "meta": {
+    "title": "Dinh Thi Thu Chang | Vietnam–Korea Visa • Korean Import • Vocational Training",
+    "description": "Dinh Thi Thu Chang – Founder & CEO of DOC Korea Vietnam. Visa, work permit and residence card consulting; authentic Korean Red Ginseng, cosmetics and food distribution; vocational training for young talent."
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "gallery": "Highlights",
+    "process": "Process",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "cta": "Contact Now"
+  },
+  "brand": {
+    "name": "Dinh Thi Thu Chang",
+    "tagline": "Your trusted Vietnam – Korea bridge"
+  },
+  "hero": {
+    "eyebrow": "Visa • Korean Import • Vocational Training",
+    "title_pre": "Your trusted partner on the",
+    "title_accent": "Vietnam – Korea",
+    "sub": "Visa and legal documentation support, authentic Korean product distribution, and vocational training development — built on trust earned with every client.",
+    "badge1": "Founder & CEO, DOC Korea Vietnam",
+    "badge2": "Official partner of Hwang Pung Jung — Since 1908",
+    "badge3": "Signed partnerships in Korea",
+    "cta_primary": "Call 0988 818 936",
+    "cta_secondary": "Chat on Zalo",
+    "card_title": "Trusted by",
+    "card_sub": "hundreds of clients & partners across Vietnam and Korea"
+  },
+  "trust": {
+    "items": [
+      { "value": "3", "label": "Core service areas" },
+      { "value": "Since 1908", "label": "Hwang Pung Jung partnership" },
+      { "value": "VN ⇄ KR", "label": "Two-way connection" },
+      { "value": "Dedicated", "label": "Support at every step" }
+    ]
+  },
+  "services": {
+    "eyebrow": "Services",
+    "title": "Three core areas of expertise",
+    "sub": "Every service is personally overseen by Chang, ensuring transparency and reliable delivery.",
+    "items": [
+      {
+        "title": "Visa • Work Permit • Residence Card",
+        "desc": "Full-service visa support for Vietnamese citizens travelling to Korea, plus work permits and residence cards for foreign nationals in Vietnam.",
+        "list": [
+          "Guidance on the right visa type for your purpose",
+          "Accurate, thorough document preparation and review",
+          "Clear, continuous progress updates",
+          "Support with extensions and status conversions"
+        ],
+        "cta": "Get Visa Consulting"
+      },
+      {
+        "title": "Korean Product Import & Distribution",
+        "desc": "Authentic distribution of Korean Red Ginseng, cosmetics and food — sourced directly from trusted Korean brands and cooperatives.",
+        "list": [
+          "Premium red ginseng — partnered with Hwang Pung Jung Since 1908",
+          "Genuine cosmetics with full import documentation",
+          "A wide range of Korean food products, clearly sourced",
+          "Wholesale & retail supply with nationwide delivery"
+        ],
+        "cta": "Explore Products"
+      },
+      {
+        "title": "Vocational Training & Development",
+        "desc": "Building practical vocational training programs that open career opportunities and guide young people's development.",
+        "list": [
+          "Skills training aligned with market demand",
+          "Job placement links, domestic and international",
+          "Partnerships with vocational schools and businesses",
+          "End-to-end support from training to employment"
+        ],
+        "cta": "Learn About Programs"
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "Founder",
+    "title": "Dinh Thi Thu Chang",
+    "role": "Founder & CEO — DOC Korea Vietnam",
+    "p1": "Through years of close collaboration with Korean partners — from brand launch ceremonies and distribution agreement signings to working visits across Korea — Chang has built her reputation on genuine, hands-on partnership in every project.",
+    "p2": "Beyond a single field, Chang aims to be a comprehensive bridge: legal support that gives Vietnamese travelers confidence abroad and foreign residents confidence in Vietnam, authentic Korean products, and career opportunities for the next generation.",
+    "sig_role": "Founder & CEO, DOC Korea Vietnam"
+  },
+  "gallery": {
+    "eyebrow": "In Action",
+    "title": "Milestones on the Vietnam – Korea journey",
+    "sub": "Moments from partnership signings, brand launches and working trips to Korea.",
+    "captions": [
+      "Hwang Pung Jung grand opening",
+      "Distribution partnership signing in Korea",
+      "DOC Korea Vietnam agency delegation",
+      "Nghe An branch launch ceremony",
+      "Visiting the ginseng cultivation region",
+      "Punggi Ginseng Museum, Korea"
+    ]
+  },
+  "process": {
+    "eyebrow": "Process",
+    "title": "How working with Chang works",
+    "steps": [
+      { "title": "Reach out", "desc": "Call, message on Zalo or KakaoTalk to share what you need." },
+      { "title": "Get a tailored plan", "desc": "Chang reviews your situation and proposes the best approach." },
+      { "title": "We get to work", "desc": "Document or order processing, with transparent progress tracking." },
+      { "title": "Ongoing support", "desc": "Support continues after completion, ready whenever you need us again." }
+    ]
+  },
+  "quote": {
+    "text": "Trust isn't something you claim — it's proven through every application, every shipment, every trainee who grows into their career.",
+    "by": "Dinh Thi Thu Chang — Founder & CEO"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Ready to help you today",
+    "sub": "Choose whichever channel is most convenient — Chang responds quickly.",
+    "phone_label": "Phone / Zalo",
+    "phone_sub": "Call directly or message on Zalo",
+    "kakao_label": "KakaoTalk",
+    "kakao_sub": "Find the ID or scan the QR code below",
+    "kakao_id": "Changkum",
+    "kakao_note": "Sample QR — scan within the KakaoTalk app, or search the ID above.",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "hours_label": "Response hours",
+    "hours_value": "8:00 AM – 9:00 PM daily, including weekends",
+    "form_note": "For the fastest response, please contact directly by phone, Zalo, or KakaoTalk."
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Frequently asked questions",
+    "items": [
+      {
+        "q": "Does Chang handle the entire visa process, or just consulting?",
+        "a": "Full service: choosing the right visa type, preparing documents, and continuous progress tracking until completion."
+      },
+      {
+        "q": "Are the Korean products clearly sourced and authentic?",
+        "a": "Yes. Red ginseng, cosmetics and food products are all authentically imported with clear partners and documentation — including Hwang Pung Jung Since 1908."
+      },
+      {
+        "q": "Who is the vocational training program for?",
+        "a": "For young people looking to build practical vocational skills and connect to job opportunities, domestically or abroad."
+      },
+      {
+        "q": "What's the fastest way to reach you?",
+        "a": "Call or message on Zalo at 0988 818 936 for the quickest response. You can also reach out via KakaoTalk, ID Changkum."
+      }
+    ]
+  },
+  "final_cta": {
+    "title": "Let Chang be your partner",
+    "sub": "Whether it's visa procedures, authentic Korean products, or vocational training opportunities — reach out for dedicated support.",
+    "primary": "Call 0988 818 936",
+    "secondary": "Chat on Zalo"
+  },
+  "footer": {
+    "desc": "A trusted bridge between Vietnam and Korea — visa & legal documentation, authentic Korean products, vocational training development.",
+    "col_services": "Services",
+    "col_company": "Company",
+    "col_contact": "Contact",
+    "link_visa": "Visa & Work Permit",
+    "link_import": "Korean Import",
+    "link_training": "Vocational Training",
+    "link_about": "About Chang",
+    "link_gallery": "Highlights",
+    "link_faq": "FAQ",
+    "rights": "© 2026 Dinh Thi Thu Chang. All rights reserved."
+  },
+  "mobile_bar": {
+    "call": "Call",
+    "zalo": "Zalo",
+    "kakao": "Kakao"
+  }
+}
