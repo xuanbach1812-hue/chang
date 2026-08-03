@@ -75,7 +75,13 @@ function renderTrust(dict) {
   const el = document.getElementById('trustGrid');
   if (!el) return;
   el.innerHTML = dict.trust.items
-    .map((item) => `<div class="trust-item"><strong>${item.value}</strong><span>${item.label}</span></div>`)
+    .map((item, i) => {
+      const isNumeric = /^\d+$/.test(item.value);
+      const valueMarkup = isNumeric
+        ? `<strong data-count-to="${item.value}">0</strong>`
+        : `<strong>${item.value}</strong>`;
+      return `<div class="trust-item" data-reveal style="--i:${i}">${valueMarkup}<span>${item.label}</span></div>`;
+    })
     .join('');
 }
 
@@ -84,7 +90,7 @@ function renderServices(dict) {
   if (!el) return;
   el.innerHTML = dict.services.items
     .map((item, i) => `
-      <div class="service-card" data-reveal>
+      <div class="service-card" data-reveal style="--i:${i}">
         <div class="service-icon">${icons[SERVICE_ICONS[i]] || ''}</div>
         <h3>${item.title}</h3>
         <p>${item.desc}</p>
@@ -128,7 +134,7 @@ function renderGallery(dict) {
   if (!el) return;
   el.innerHTML = GALLERY_FILES
     .map(({ file, tall }, i) => `
-      <div class="gallery-item${tall ? ' tall' : ''}">
+      <div class="gallery-item${tall ? ' tall' : ''}" data-reveal style="--i:${i}">
         <img class="ph-img" src="/images/${file}" alt="${dict.gallery.captions[i] || ''}" loading="lazy" />
         <div class="img-ph" data-fallback-for="${file}" hidden></div>
         <span class="gallery-caption">${dict.gallery.captions[i] || ''}</span>
@@ -142,7 +148,7 @@ function renderSteps(dict) {
   const el = document.getElementById('stepsGrid');
   if (!el) return;
   el.innerHTML = dict.process.steps
-    .map((s) => `<div class="step" data-reveal><h4>${s.title}</h4><p>${s.desc}</p></div>`)
+    .map((s, i) => `<div class="step" data-reveal style="--i:${i}"><h4>${s.title}</h4><p>${s.desc}</p></div>`)
     .join('');
 }
 
@@ -158,9 +164,9 @@ function renderFaq(dict) {
   if (!el) return;
   el.innerHTML = dict.faq.items
     .map((item, i) => `
-      <details class="faq-item"${i === 0 ? ' open' : ''}>
+      <details class="faq-item${i === 0 ? ' is-expanded' : ''}"${i === 0 ? ' open' : ''} data-reveal style="--i:${i}">
         <summary class="faq-q"><span>${item.q}</span>${icons.chevronDown}</summary>
-        <div class="faq-a">${item.a}</div>
+        <div class="faq-a"><div class="faq-a-inner">${item.a}</div></div>
       </details>
     `)
     .join('');
@@ -194,6 +200,10 @@ function setLang(lang) {
   updateLangSwitch(lang);
   injectIcons();
   observeReveals();
+  observeCountUps();
+
+  const backToTop = document.getElementById('backToTop');
+  if (backToTop && dict.a11y) backToTop.setAttribute('aria-label', dict.a11y.back_to_top);
 
   localStorage.setItem(LANG_KEY, lang);
 }
@@ -226,16 +236,123 @@ function initMobileNav() {
   links.querySelectorAll('a').forEach((a) => a.addEventListener('click', close));
 }
 
-function initHeaderScroll() {
-  const btn = document.getElementById('headerCallBtn');
+function initScrollEffects() {
+  const header = document.querySelector('.header');
+  const callBtn = document.getElementById('headerCallBtn');
   const hero = document.getElementById('home');
-  if (!btn || !hero) return;
-  const threshold = () => hero.offsetHeight * 0.6;
+  const progress = document.getElementById('scrollProgress');
+  const backToTop = document.getElementById('backToTop');
+  const heroThreshold = () => (hero ? hero.offsetHeight * 0.6 : 0);
+
   const onScroll = () => {
-    btn.classList.toggle('is-visible', window.scrollY > threshold());
+    const scrollY = window.scrollY;
+    header?.classList.toggle('is-scrolled', scrollY > 8);
+    callBtn?.classList.toggle('is-visible', scrollY > heroThreshold());
+    backToTop?.classList.toggle('is-visible', scrollY > window.innerHeight * 0.6);
+
+    if (progress) {
+      const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = scrollable > 0 ? (scrollY / scrollable) * 100 : 0;
+      progress.style.width = `${Math.min(100, Math.max(0, pct))}%`;
+    }
   };
+
   window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll, { passive: true });
   onScroll();
+}
+
+function initBackToTop() {
+  const btn = document.getElementById('backToTop');
+  if (!btn) return;
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+let countUpObserver = null;
+
+function animateCountUp(el) {
+  const target = parseInt(el.dataset.countTo, 10);
+  if (Number.isNaN(target)) return;
+
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduceMotion) {
+    el.textContent = String(target);
+    return;
+  }
+
+  const duration = 900;
+  const start = performance.now();
+  const tick = (now) => {
+    const progress = Math.min(1, (now - start) / duration);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    el.textContent = String(Math.round(target * eased));
+    if (progress < 1) requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
+}
+
+// Trust numbers re-render on every language switch, so this mirrors
+// observeReveals(): re-scan for fresh [data-count-to] nodes each time.
+function observeCountUps() {
+  const targets = document.querySelectorAll('[data-count-to]');
+  if (targets.length === 0) return;
+
+  if (!('IntersectionObserver' in window)) {
+    targets.forEach(animateCountUp);
+    return;
+  }
+
+  if (!countUpObserver) {
+    countUpObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            animateCountUp(entry.target);
+            countUpObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+  }
+  targets.forEach((t) => countUpObserver.observe(t));
+}
+
+// FAQ items are rebuilt on every language switch; delegate from the list
+// container so the handler keeps working without re-attaching per item.
+function initFaqAccordion() {
+  const list = document.getElementById('faqList');
+  if (!list) return;
+
+  list.addEventListener('click', (e) => {
+    const summary = e.target.closest('.faq-q');
+    if (!summary) return;
+    const item = summary.closest('.faq-item');
+    if (!item || item.dataset.animating === '1') return;
+    e.preventDefault();
+
+    if (item.classList.contains('is-expanded')) {
+      item.dataset.animating = '1';
+      item.classList.remove('is-expanded');
+      const panel = item.querySelector('.faq-a');
+      panel?.addEventListener(
+        'transitionend',
+        () => {
+          item.removeAttribute('open');
+          delete item.dataset.animating;
+        },
+        { once: true }
+      );
+    } else {
+      item.dataset.animating = '1';
+      item.setAttribute('open', '');
+      requestAnimationFrame(() => item.classList.add('is-expanded'));
+      const panel = item.querySelector('.faq-a');
+      panel?.addEventListener('transitionend', () => { delete item.dataset.animating; }, { once: true });
+    }
+  });
 }
 
 let revealObserver = null;
@@ -293,7 +410,9 @@ function initKakaoCopy() {
 function init() {
   initLangSwitch();
   initMobileNav();
-  initHeaderScroll();
+  initScrollEffects();
+  initBackToTop();
+  initFaqAccordion();
   initImageFallbacks();
   initKakaoCopy();
   setLang(detectInitialLang());

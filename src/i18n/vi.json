@@ -174,5 +174,8 @@
     "call": "Gọi ngay",
     "zalo": "Zalo",
     "kakao": "Kakao"
+  },
+  "a11y": {
+    "back_to_top": "Lên đầu trang"
   }
 }
