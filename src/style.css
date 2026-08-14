@@ -251,7 +251,7 @@ button { font-family: inherit; cursor: pointer; }
   font-weight: 600;
   font-size: 15px;
 }
-.nav-links a { position: relative; color: var(--color-ink); opacity: 0.8; transition: opacity 150ms; padding: 8px 0; }
+.nav-links a { position: relative; color: var(--color-ink); opacity: 0.8; transition: opacity 220ms var(--ease-out), color 220ms var(--ease-out); padding: 8px 0; }
 .nav-links a:hover { opacity: 1; color: var(--color-burgundy); }
 .nav-links a::after {
   content: "";
@@ -292,6 +292,7 @@ button { font-family: inherit; cursor: pointer; }
   color: var(--color-ink-muted);
   min-height: 40px;
   min-width: 44px;
+  transition: background 220ms var(--ease-out), color 220ms var(--ease-out);
 }
 .lang-switch button[aria-pressed="true"] {
   background: var(--color-burgundy);
@@ -335,8 +336,12 @@ button { font-family: inherit; cursor: pointer; }
     var(--color-bg);
   background-size: 130% 130%, 130% 130%, auto;
   animation: heroGlow 16s ease-in-out infinite alternate;
+  animation-play-state: paused;
   overflow: hidden;
 }
+/* background-position animation repaints on the main thread, unlike a
+   transform; only run it while the hero is actually on screen. */
+.hero.in-view { animation-play-state: running; }
 @keyframes heroGlow {
   0% { background-position: 85% -10%, 5% 10%, 0 0; }
   100% { background-position: 78% -2%, 12% 18%, 0 0; }
@@ -414,7 +419,7 @@ button { font-family: inherit; cursor: pointer; }
   box-shadow: var(--shadow-lg);
   aspect-ratio: 4 / 5;
   background: var(--color-surface);
-  transition: box-shadow 300ms ease;
+  transition: box-shadow 300ms var(--ease-out);
   animation: heroPortraitFloat 6s ease-in-out 1.1s infinite;
 }
 @keyframes heroPortraitFloat {
@@ -661,7 +666,7 @@ button { font-family: inherit; cursor: pointer; }
   padding: var(--space-3);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  transition: border-color 150ms;
+  transition: border-color 250ms var(--ease-out);
 }
 .contact-row:hover { border-color: var(--color-gold); }
 .contact-row .icon {
@@ -805,6 +810,7 @@ button { font-family: inherit; cursor: pointer; }
 .footer-col h5 { font-family: var(--font-body); font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #C9B48A; margin-bottom: var(--space-2); }
 .footer-col ul { display: flex; flex-direction: column; gap: 10px; }
 .footer-col a, .footer-col span { font-size: 14.5px; color: #E8DFD3; opacity: 0.85; }
+.footer-col a { transition: opacity 220ms var(--ease-out), color 220ms var(--ease-out); }
 .footer-col a:hover { opacity: 1; color: var(--color-gold-light); }
 .footer-bottom {
   padding-top: var(--space-3);
@@ -861,7 +867,7 @@ button { font-family: inherit; cursor: pointer; }
   opacity: 0;
   transform: translateY(12px) scale(0.9);
   pointer-events: none;
-  transition: opacity 300ms var(--ease-out), transform 300ms var(--ease-out-back), background 200ms ease;
+  transition: opacity 300ms var(--ease-out), transform 300ms var(--ease-out-back), background 200ms var(--ease-out);
 }
 .back-to-top.is-visible { opacity: 1; transform: translateY(0) scale(1); pointer-events: auto; }
 .back-to-top:hover { background: var(--color-burgundy-dark); transform: translateY(-3px) scale(1.05); }

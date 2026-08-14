@@ -262,6 +262,27 @@ function initScrollEffects() {
   onScroll();
 }
 
+// The hero's ambient glow animates background-position, which repaints on
+// the main thread (unlike a transform). Only run it while the hero is
+// actually on screen instead of forever in the background.
+function initHeroGlowToggle() {
+  const hero = document.getElementById('home');
+  if (!hero) return;
+
+  if (!('IntersectionObserver' in window)) {
+    hero.classList.add('in-view');
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => hero.classList.toggle('in-view', entry.isIntersecting));
+    },
+    { threshold: 0 }
+  );
+  observer.observe(hero);
+}
+
 function initBackToTop() {
   const btn = document.getElementById('backToTop');
   if (!btn) return;
@@ -411,6 +432,7 @@ function init() {
   initLangSwitch();
   initMobileNav();
   initScrollEffects();
+  initHeroGlowToggle();
   initBackToTop();
   initFaqAccordion();
   initImageFallbacks();
